@@ -19,3 +19,7 @@
 .chat-item .chat.selected {
     @apply border-indigo-500 bg-white px-3 py-4 shadow-sm;
 }
+
+.message-content {
+    max-width: 100%;
+}

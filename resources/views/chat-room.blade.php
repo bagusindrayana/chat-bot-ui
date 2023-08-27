@@ -160,6 +160,9 @@
                                     top: document.body.scrollHeight,
                                     behavior: 'smooth'
                                 });
+
+                                sendButton.disabled = false;
+                                inputMessage.disabled = false;
                             }
                         } catch (error) {
                             console.log(xhr.responseText);

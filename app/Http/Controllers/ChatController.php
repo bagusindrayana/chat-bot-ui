@@ -37,6 +37,7 @@ class ChatController extends Controller
             $url = SettingHelper::get('api_url') . SettingHelper::get('api_chat');
             $stream = SettingHelper::get('stream_message');
             $token = SettingHelper::get('api_token');
+            $model = SettingHelper::get('model');
 
             $mapHistories = $chat->chat_histories->map(function ($history) {
                 return [
@@ -45,7 +46,7 @@ class ChatController extends Controller
                 ];
             })->toArray();
             $body = [
-                "model" => $request->model ?? "gpt-3.5-turbo",
+                "model" => $model ?? "gpt-3.5-turbo",
                 "messages" => array_merge($mapHistories, [
                     [
                         "role" => "user",
@@ -133,9 +134,9 @@ class ChatController extends Controller
             'from' => 'assistant',
             'message' => $request->message
         ]);
-        Notification::title('New message from AI!')
-            ->message( mb_substr($request->message, 0, 50))
-            ->show();
+        // Notification::title('New message from AI!')
+        //     ->message( mb_substr($request->message, 0, 50))
+        //     ->show();
         return response()->json([
             'message' => 'success'
         ]);

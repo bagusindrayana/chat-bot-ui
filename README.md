@@ -9,6 +9,11 @@ build with [Laravel](https://laravel.com) and [NativePHP](https://nativephp.com)
 - tom select
 - alpine js
 
+![chat room design](https://ivitheri.sirv.com/Images/Screenshot%202023-08-27%20134751.png)
+
+![modal setting design](https://ivitheri.sirv.com/Images/Screenshot%202023-08-27%20134810.png)
+
+
 ## Development
 - `composer install`
 - `npm install`

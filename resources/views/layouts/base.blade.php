@@ -15,7 +15,7 @@
     <div id="page-container" x-data="{ mobileSidebarOpen: false }" class="relative mx-auto h-screen min-w-[320px] bg-white lg:ml-80">
         <!-- Page Sidebar -->
         <nav id="page-sidebar"
-            class="fixed bottom-0 left-0 top-0 z-50 flex h-full w-96 transform flex-col bg-slate-200 transition-transform duration-500 ease-out lg:translate-x-0 lg:shadow-none"
+            class="fixed bottom-0 left-0 top-0 z-50 flex h-full w-96 md:w-72 xl:w-80 transform flex-col bg-slate-200 transition-transform duration-500 ease-out lg:translate-x-0 lg:shadow-none"
             x-bind:class="{
                 '-translate-x-full': !mobileSidebarOpen,
                 'translate-x-0 shadow-lg': mobileSidebarOpen,
@@ -68,10 +68,10 @@
 
                             <div class="grow">
                                 <p class="mb-0.5 line-clamp-1 text-sm font-bold title-chat">New Chat</p>
-
+                                <p class="text-xs font-medium text-slate-400">a second ago</p>
                             </div>
                             <div class="flex-none self-start">
-                                <p class="text-xs font-medium text-slate-400">a second ago</p>
+                               
                             </div>
                         </a>
                     </div>
@@ -128,7 +128,7 @@
                             <path
                                 d="M14 6c-.762 0-1.52.02-2.271.062C10.157 6.148 9 7.472 9 8.998v2.24c0 1.519 1.147 2.839 2.71 2.935.214.013.428.024.642.034.2.009.385.09.518.224l2.35 2.35a.75.75 0 001.28-.531v-2.07c1.453-.195 2.5-1.463 2.5-2.915V8.998c0-1.526-1.157-2.85-2.729-2.936A41.645 41.645 0 0014 6z" />
                         </svg>
-                        <span>Tail<span class="font-medium text-indigo-600">Chat</span></span>
+                        <span class="text-indigo-600">{{ env("APP_NAME") }} </span>
                     </a>
                     <!-- END Brand -->
                 </div>
@@ -161,7 +161,7 @@
 
         <!-- Page Footer -->
         <footer id="page-footer"
-            class="fixed bottom-0 left-0 right-0 items-center border-t border-slate-200/75 bg-white lg:left-96">
+            class="fixed bottom-0 left-0 right-0 items-center border-t border-slate-200/75 bg-white  lg:left-80">
             @yield('footer')
         </footer>
         <!-- END Page Footer -->

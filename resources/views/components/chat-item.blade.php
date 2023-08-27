@@ -4,10 +4,10 @@
 
             <div class="grow">
                 <p class="mb-0.5 line-clamp-1 text-sm font-bold">{{ $chat->title }}</p>
-
+                <p class="text-xs font-medium text-slate-400">{{ $chat->created_at->diffForHumans() }}</p>
             </div>
             <div class="flex self-start items-center">
-                <p class="text-xs font-medium text-slate-400">{{ $chat->created_at->diffForHumans() }}</p>
+                
                 <button class="mx-2 text-indigo-500 delete-button" type="button" onclick="deleteChat{{$chat->id}}.submit(); event.stopPropagation();"><i class="fas fa-trash"></i></button>
             </div>
         </a>
@@ -16,10 +16,10 @@
 
             <div class="grow">
                 <p class="mb-0.5 line-clamp-1 text-sm font-bold">{{ $chat->title }}</p>
-
+                <p class="text-xs font-medium text-slate-400">{{ $chat->created_at->diffForHumans() }}</p>
             </div>
             <div class="flex self-start items-center">
-                <p class="text-xs font-medium text-slate-400">{{ $chat->created_at->diffForHumans() }}</p>
+                
                 <button class="mx-2 text-indigo-500 delete-button" type="button" onclick="deleteChat{{$chat->id}}.submit(); event.stopPropagation();"><i class="fas fa-trash"></i></button>
             </div>
         </a>
