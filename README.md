@@ -12,6 +12,8 @@ build with [Laravel](https://laravel.com) and [NativePHP](https://nativephp.com)
 ## Development
 - `composer install`
 - `npm install`
+- copy `.env.example` to `.env` and fill `APP_NAME`
+- `php artisan key:generate`
 - `php artisan native:install`
 - `php artisan native:migrate --seed`
 - `php artisan native:serve`
