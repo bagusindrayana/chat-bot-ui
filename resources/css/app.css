@@ -1,0 +1,21 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "tom-select/dist/css/tom-select.min.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.chat-item .delete-button {
+    display: none;
+}
+
+.chat-item:hover .delete-button {
+    display: block;
+}
+
+.chat-item .chat {
+    @apply border-transparent px-3 py-4 hover:border-indigo-300 hover:bg-white/50 active:border-indigo-500 active:bg-white active:shadow-sm;
+}
+
+.chat-item .chat.selected {
+    @apply border-indigo-500 bg-white px-3 py-4 shadow-sm;
+}
